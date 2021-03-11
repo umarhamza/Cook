@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="container">
       <div className="row">
-        <div className="col col-8">
+        <div className="table-col col col-8">
           <Table />
         </div>
         <div className="sidebar-col col col-4">

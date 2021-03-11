@@ -1148,6 +1148,7 @@ textarea {
     background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: all 0.3s ease-in-out;
+    pointer-events: none;
   }
   nav.primary:hover .subnav-underlay {
     visibility: visible;

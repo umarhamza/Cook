@@ -15,3 +15,10 @@ $gillsans: "Gill Sans W01 Medium";
   font-family: inherit;
   cursor: pointer;
 }
+
+@mixin truncate-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

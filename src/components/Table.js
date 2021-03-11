@@ -20,6 +20,7 @@ export default function Table() {
 
       <div className="table-body">
         <TableRow />
+        <TableRow />
       </div>
     </div>
   );
