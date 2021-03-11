@@ -1,0 +1,317 @@
+.table {
+  .table-header {
+    background-color: $brown;
+    padding: 16px 0;
+    display: none;
+    margin-bottom: 25px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 40px;
+    }
+
+    h4 {
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media screen and (min-width: 1024px) {
+        font-size: 17px;
+      }
+    }
+
+    .th {
+      &-1 {
+        width: 40%;
+        padding-left: 17px;
+
+        @media screen and (min-width: 1024px) {
+          width: 55%;
+        }
+
+        h4 {
+          text-align: left;
+        }
+      }
+
+      &-2, 
+      &-4 {
+        width: 17.5%;
+      }
+
+      &-2 {
+        @media screen and (min-width: 1024px) {
+          width: 15%;
+        }
+      }
+
+      &-3 {
+        width: 25%;
+
+        @media screen and (min-width: 1024px) {
+          width: 20%;
+        }
+      }
+
+      &-4 {
+        padding-right: 17px;
+
+        @media screen and (min-width: 1024px) {
+          width: 10%;
+        }
+
+        h4 {
+          text-align: right;
+        }
+      }
+    }
+    
+  }
+
+  .table-body {
+    .tr {
+      display: flex;
+      border-bottom: 1px solid #707070;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+    }
+
+    .remove-product {
+      @include reset-button();
+      text-decoration: underline;
+      text-align: left;
+      font-size: 14px;
+      display: none;
+
+      @media screen and (max-width: 1023px) {
+        display: inline;
+      }
+    }
+
+    .tr-image {
+      background-color: #c4c4c4;
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+
+      &, img {
+        width: 170px;
+        height: 170px;
+      }
+    }
+
+    .tr-content {
+      padding-left: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      @media screen and (min-width:1024px) {
+        padding-left: 0;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      p {
+        @media screen and (min-width:1024px) {
+          font-size: 18px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          font-size: 20px;
+        }
+      }
+
+      .tr-image-desktop {
+        display: none;
+        
+        @media screen and (min-width: 1024px) {
+          display: inline-block;
+          margin-right: 20px;
+        }
+
+        @media screen and (min-width: 1200px) {
+          margin-right: 35px;
+        }
+      }
+
+      .product {
+        &-name {
+          @media screen and (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+            width: 55%;
+          }
+
+          h3, p {
+            @media screen and (max-width: 1023px) {
+              display: inline-block;
+            }
+          }
+
+          h3 {
+            margin-right: 20px;
+            margin-bottom: 10px;
+            font-family: $hugo, serif;
+            font-size: 24px;
+            color: $green;
+
+            @media screen and (min-width: 1024px) {
+              margin-bottom: 14px;
+            }
+
+            @media screen and (min-width: 1200px) {
+              font-size: 28px;
+            }
+          }
+
+          p {
+            margin-bottom: 5px;
+            font-weight: bold;
+
+            @media screen and (min-width: 1024px) {
+              margin-bottom: 8px;
+            }
+          }
+
+          button{
+            display: none;
+            @media screen and (min-width: 1024px) {
+              display: inline-block;
+            }
+          }
+        }
+
+        &-price {
+          margin-bottom: 8px;
+
+          @media screen and (min-width: 1024px) {
+            width: 15%;
+            text-align: center;
+          }
+
+
+          span {
+            @media screen and (min-width:1024px){
+              display: none;
+            }
+          }
+        }
+
+        &-qty {
+          $height: 32px;
+
+          position: relative;
+          display: inline-block;
+          margin-bottom: 12px;
+
+          @media screen and (min-width: 1024px) {
+            width: 20%;
+            text-align: center;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          .product-qty-field {
+            position: relative;
+            width: 90px;
+            margin: 0 auto;
+          }
+
+          input[type="number"] {
+            width: inherit;
+            height: $height;
+            line-height: $height + 1px;
+            vertical-align: middle;
+            text-align: center;
+            border-radius: 3px;
+            border: 1px solid $brown;
+            -moz-appearance: textfield;
+            font-family: $hugo, serif;
+            font-size: 14px;
+          }
+
+          button {
+            @include reset-button();
+            width: 32px;
+            height: $height;
+            line-height: $height;
+            vertical-align: middle;
+            font-size: 0;
+            position: absolute;
+            left: 0;
+            top: 0; 
+            padding: 0 10px;
+
+            &::before,
+            &::after {
+              position: absolute;
+              width: 10px;
+              height: 2px;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+            }
+
+            &::before {
+              content: "";
+              background-color: $blue;
+            }
+
+            &:last-of-type {
+              left: auto;
+              right: 0;
+
+              &::after {
+                content: "";
+                background-color: $blue;
+                transform: rotate(90deg)
+              }
+            }
+
+            &:hover {
+              &::before, &::after {
+                background-color: $brown;
+              }
+            }
+          }
+        }
+
+        &-total {
+          margin-bottom: 5px;
+
+          @media screen and (max-width: 1023px) {
+            font-weight: bold;
+          }
+
+          @media screen and (min-width: 1024px) {
+            text-align: right;
+            width: 10%;
+            padding-right: 17px;
+          }
+
+          span {
+            @media screen and (min-width:1024px){
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

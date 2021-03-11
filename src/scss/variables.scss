@@ -1,0 +1,17 @@
+$brown: #575756;
+$blue: #5E9DB4;
+$green: #768D87;
+$cream: #E6E1DD;
+
+$hugo: "hugos_handregular";
+$gillsans: "Gill Sans W01 Medium";
+
+@mixin reset-button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}

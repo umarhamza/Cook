@@ -1,0 +1,34 @@
+main {
+  color: $brown;
+  font-family: $gillsans, sans-serif;
+
+  h4 {
+    font-family: $hugo, serif;
+  }
+
+	.container { 
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+		.row {
+			display: flex;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+    
+    .col-8 {
+      width: 100%;
+      @media screen and (min-width: 1024px) {
+        width: 75%;
+      }
+    }
+
+    .col-4 {
+      width: 100%;
+      @media screen and (min-width: 1024px) {
+        width: 25%;
+      }
+    }
+  }
+}

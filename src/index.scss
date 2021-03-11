@@ -1,0 +1,211 @@
+@import "./scss/variables.scss";
+@import "./scss/layout.scss";
+@import "./scss/table.scss";
+@import "./scss/sidebar.scss"; 
+
+.sidebar-col {
+  @media screen and (min-width: 1024px) {
+    padding-left: 20px;
+  }
+}
+
+.sidebar {
+  background-color: $cream;
+  padding: 30px 30px 80px 30px;
+
+  @media screen and (min-width: 1024px) {
+    height: 100%;
+    padding: 25px 25px 80px 25px;
+  }
+
+  h4 {
+    text-transform: uppercase; 
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 3px solid $brown;
+  }
+
+  form {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    white-space: nowrap;
+
+    ::-webkit-input-placeholder,
+    ::-moz-placeholder,
+    :-ms-input-placeholder,
+    :-moz-placeholder {
+      color: #AAAAAA;
+    }
+
+    h5 {
+      margin-bottom: 11px;
+    }
+
+    label {
+      display: flex;
+    }
+
+    input[type="text"] {
+      width: 195px;
+      height: 35px;
+      vertical-align: middle;
+      line-height: 35px;
+      font-family: $gillsans, sans-serif;
+      color: $brown;
+      border: 1px solid $blue;
+      border-radius: 3px 0 0 3px;
+      padding-left: 10px;
+      font-size: 16px;
+      padding-top: 4px;
+    }
+
+    button {
+      @include reset-button();
+      height: 35px;
+      line-height: 35px;
+      vertical-align: middle;
+      text-transform: uppercase;
+      background-color: $blue;
+      border: 1px solid $blue;
+      color: #fff;
+      padding: 0 16px;
+      border-radius: 0 3px 3px 0;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: $brown;
+        border-color: $brown;
+      }
+    }
+  }
+
+  dl {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    &.subtotal {
+      margin-top: 40px;
+    }
+
+    &.shipping-tax {
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+      dt, 
+      dd {
+        margin-bottom: 15px;
+      }
+
+      dt.sales-tax {
+        position: relative;
+        display: inline-block;
+
+        span {
+          position: relative;
+        }
+
+        a {
+          position: absolute;
+          top: -12px;
+          right: -27px;
+          display: block;
+          opacity: 1;
+          transition: opacity 0.3s ease-in-out;
+
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+
+    &.estimated-total,
+    &.subtotal {
+      dd {
+        font-weight: bold;
+        font-size: 21px;
+      }
+    }
+
+    &.estimated-total {
+      margin-top: 22px;
+      margin-bottom: 15px;
+    }
+
+    dt, 
+    dd {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+    }
+
+    dt {
+      padding-right: 15px; 
+      width: 80%;
+    }
+
+    dd {
+      width: 20%; 
+      text-align: right;
+    }
+  }
+
+  button.proceed-to-checkout {
+    @include reset-button();
+    margin-top: 35px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $hugo, serif;
+    font-size: 18px;
+    background-color: $blue;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 30px;
+
+    &:hover {
+      background-color: $brown;
+    }
+  }
+
+  p.delivery-note {
+    font-size: 16px;
+    margin-bottom: 25px;
+
+    a {
+      color: $blue;
+      text-decoration: underline;
+    }
+  }
+
+  a.switch-to-collect {
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: underline;
+    line-height: 26px;
+    display: inline-block;
+    margin-bottom: 15px;
+
+    @media screen and (min-width: 1024px){
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  p.call-for-help {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+}
