@@ -1,0 +1,69 @@
+{
+    "currency": "£",
+    "items": [
+        {
+            "id": "1",
+            "name": "Lasagne Al Forno",
+            "price": "1550",
+            "serves": "Serves 4",
+            "image": "/images/lasagne-al-forno.jpg"
+        },
+        {
+            "id": "2",
+            "name": "Garlic Ciabatta",
+            "price": "249",
+            "serves": "Serves 4",
+            "image": "/images/garlic-ciabatta.jpg"
+        },
+        {
+            "id": "3",
+            "name": "White Chocolate & Raspberry Cheesecake",
+            "price": "850",
+            "serves": "Serves 6",
+            "image": "/images/white-chocolate-cheesecake.jpg"
+        },
+        {
+            "id": "4",
+            "name": "Beef Bourguignon",
+            "price": "899",
+            "serves": "Serves 2",
+            "image": "/images/beef-bourguignon.jpg"
+        },
+        {
+            "id": "5",
+            "name": "Cottage Pie",
+            "price": "1550",
+            "serves": "Serves 4",
+            "image": "/images/cottage-pie.jpg"
+        },
+        {
+            "id": "6",
+            "name": "Classic Fish Pie",
+            "price": "1795",
+            "serves": "Serves 4",
+            "image": "/images/classic-fish-pie.jpg"
+        }, 
+        {
+            "id": "7",
+            "name": "Chicken Alexander",
+            "price": "450",
+            "serves": "Serves 1",
+            "image": "/images/chicken-alexander.jpg"
+        },
+        {
+            "id": "8",
+            "name": "Moroccan Spiced Lamb Tagine",
+            "price": "3500",
+            "serves": "Serves 8",
+            "image": "/images/moroccan-spiced-lamb-tagine.jpg"
+        },
+        {
+            "id": "9",
+            "name": "Chicken Tikka Masala",
+            "price": "1395",
+            "serves": "Serves 4",
+            "image": "/images/chicken-tikka-masala.jpg"
+        }
+
+    ]
+}

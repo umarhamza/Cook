@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Info_icon" data-name="Info icon" transform="translate(-1405 -636)">
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1405 636)" fill="none" stroke="#575756" stroke-width="2" stroke-dasharray="3 3">
+      <circle cx="12" cy="12" r="12" stroke="none"/>
+      <circle cx="12" cy="12" r="11" fill="none"/>
+    </g>
+    <g id="Info_icon-2" data-name="Info icon" transform="translate(1413.253 640.952)">
+      <path id="Path_1" data-name="Path 1" d="M12.732,16.123a3.208,3.208,0,0,1-.858.154.6.6,0,0,1-.335-.065c-.139-.1-.4-.277.045-1.155l.825-1.646a3,3,0,0,0,.2-2.662A2.185,2.185,0,0,0,11.027,9.58a3.942,3.942,0,0,0-.791-.08,4.2,4.2,0,0,0-2.6.929.413.413,0,0,0,.407.7,3.185,3.185,0,0,1,.858-.154.6.6,0,0,1,.332.064c.139.1.4.281-.042,1.157l-.825,1.647a3,3,0,0,0-.2,2.662,2.183,2.183,0,0,0,1.585,1.169,4.02,4.02,0,0,0,.787.08,4.2,4.2,0,0,0,2.6-.929.413.413,0,0,0-.405-.7Z" transform="translate(-7.5 -4.549)" fill="#575756"/>
+      <circle id="Ellipse_2" data-name="Ellipse 2" cx="2" cy="2" r="2" transform="translate(2.747 0.048)" fill="#575756"/>
+    </g>
+  </g>
+</svg>

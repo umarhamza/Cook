@@ -1,4 +1,4 @@
-import infoIcon from "../img/info-icon.png";
+import infoIcon from "../img/info-icon.svg";
 
 export default function Sidebar() {
   return (

@@ -1,19 +1,21 @@
 import Slider from 'react-slick';
+import { connect } from 'react-redux';
+import { getProducts } from '../actions/products';
 import CarouselItem from './CarouselItem'
+import carouselSettings from './carouselSettings';
 
-export default function Carousel() {
+ function Carousel() {
     const settings = {
-      dots: true,
-      infinite: true,
-      speed: 500,
-      slidesToShow: 3,
-      slidesToScroll: 1
+      ...carouselSettings
     };
 
     return (
       <div className='product-carousel'>
-        <h2>Best Sellers</h2>
+        <h2>BestSellers</h2>
         <Slider {...settings}>
+          <CarouselItem />
+          <CarouselItem />
+          <CarouselItem />
           <CarouselItem />
           <CarouselItem />
           <CarouselItem />
@@ -21,4 +23,6 @@ export default function Carousel() {
         </Slider>
       </div>
     );
-}
+};
+
+export default connect(null, {getProducts})(Carousel);
