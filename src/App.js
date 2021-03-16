@@ -111,11 +111,13 @@ class App extends Component {
               updateBasket={this.updateBasket}
               removeProduct={this.removeProduct}
             />
-            <Carousel products={this.state.products} addProduct={this.addProduct} />
           </div>
           <div className='sidebar-col col col-4'>
             <Sidebar basket={this.state} />
           </div>
+        </div>
+        <div className="product-carousel-wrapper">
+          <Carousel products={this.state.products} addProduct={this.addProduct} />
         </div>
       </div>
     );
