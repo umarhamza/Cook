@@ -3,9 +3,12 @@
 
   margin-top: 60px;
   padding-top: 35px;
-  padding-bottom: 80px;
   text-align: center;
   border-top: 1px solid #E5E1DD;
+
+  @media screen and (min-width:1024px) {
+    padding-bottom: 80px;
+  }
 
   h2 {
     margin-bottom: 35px;
@@ -28,14 +31,19 @@
     overflow: hidden;
   }
 
-.slick-next::before, 
-.slick-prev::before {
-  content: "";
-  display: block;
-  border-top: 2px solid $green;
-  border-right: 2px solid $green;
-  width: 15px;
-  height: 15px;
+.slick-next,
+.slick-prev {
+  top: 69px;
+  transform: translateY(0);
+
+  &::before {
+    content: "";
+    display: block;
+    border-top: 2px solid $green;
+    border-right: 2px solid $green;
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .slick-next{

@@ -104,19 +104,6 @@
         span {
           position: relative;
         }
-
-        a {
-          position: absolute;
-          top: -12px;
-          right: -27px;
-          display: block;
-          opacity: 1;
-          transition: opacity 0.3s ease-in-out;
-
-          &:hover {
-            opacity: 0.5;
-          }
-        }
       }
     }
 
@@ -133,9 +120,6 @@
       margin-bottom: 15px;
 
       h4 {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         @include truncate-text();
       }
     }

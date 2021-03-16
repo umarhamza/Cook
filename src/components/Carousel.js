@@ -1,10 +1,8 @@
 import Slider from 'react-slick';
-import { connect } from 'react-redux';
-import { getProducts } from '../actions/products';
 import CarouselItem from './CarouselItem'
 import carouselSettings from './carouselSettings';
 
- function Carousel() {
+export default function Carousel(props) {
     const settings = {
       ...carouselSettings
     };
@@ -13,16 +11,14 @@ import carouselSettings from './carouselSettings';
       <div className='product-carousel'>
         <h2>BestSellers</h2>
         <Slider {...settings}>
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
-          <CarouselItem />
+          {props.products.map((product) => (
+            <CarouselItem
+              key={`${product.id}-carousel`}
+              product={product}
+              addProduct={props.addProduct}
+            />
+          ))}
         </Slider>
       </div>
     );
-};
-
-export default connect(null, {getProducts})(Carousel);
+}

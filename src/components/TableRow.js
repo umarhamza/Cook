@@ -1,43 +1,54 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 export default function TableRow(props) {
-  const {
-    currency,
-    product: { name, price, serves, image },
-  } = props;
+  const { currency, item, updateBasket, removeProduct } = props;
+  const [product, setProduct] = useState({...item});
 
-  const [quantity, setQuantity] = useState(1);
+  useEffect(() => {
+    updateBasket(product);
+  }, [product]);
 
   const handleIncreaseQty = e => {
-      setQuantity(quantity + 1);
+      const quantity = product.quantity + 1;
+      const total = product.price * quantity;
+      setProduct({ ...product, quantity, total });
   };
   
   const handleReduceQty = e => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
+    const quantity = product.quantity - 1;
+    const total = product.price * quantity;
+    if (quantity > 0) {
+      setProduct({ ...product, quantity, total });
+    } else {
+      removeProduct(item.id);
     }
   };
 
   return (
     <div className='tr'>
       <div className='tr-image'>
-        <img src={image} alt={`Photo of ${name}`} />
+        <img src={item.image} alt={`Photo of ${item.name}`} />
       </div>
       <div className='tr-content'>
         <div className='product-name'>
           <div className='tr-image tr-image-desktop'>
-            <img src={image} alt={`Photo of ${name}`} />
+            <img src={item.image} alt={`Photo of ${item.name}`} />
           </div>
           <div className='product-name-wrapper'>
-            <h3>{name}</h3>
-            <p>{`(${serves})`}</p>
-            <button className='remove-product'>Remove</button>
+            <h3>{item.name}</h3>
+            <p>{`(${item.serves})`}</p>
+            <button
+              className='remove-product'
+              onClick={() => {removeProduct(item.id);}}
+            >
+              Remove
+            </button>
           </div>
         </div>
         <div className='product-price'>
           <p>
             <span>Price Each:</span>{' '}
-            {`${currency}${parseFloat(price / 100, 10).toFixed(2)}`}
+            {`${currency}${parseFloat(item.price / 100, 10).toFixed(2)}`}
           </p>
         </div>
         <div className='product-qty'>
@@ -48,9 +59,14 @@ export default function TableRow(props) {
             <input
               type='number'
               min='1'
-              value={quantity}
+              value={product.quantity}
+              // readOnly style={{ pointerEvents: 'none' }}
               onChange={(e) => {
-                setQuantity(e.target.value);
+                parseInt(e.target.value) > 0 &&
+                  setProduct({
+                    ...product,
+                    quantity: parseInt(e.target.value),
+                  });
               }}
             />
             <button className='increase-qty' onClick={handleIncreaseQty}>
@@ -61,12 +77,18 @@ export default function TableRow(props) {
         <div className='product-total'>
           <p>
             <span>Line Total:</span>{' '}
-            {`${currency} ${parseFloat((price * quantity) / 100, 10).toFixed(
-              2
-            )}`}
+            {`${currency} ${parseFloat(
+              (item.price * product.quantity) / 100,
+              10
+            ).toFixed(2)}`}
           </p>
         </div>
-        <button className='remove-product'>Remove</button>
+        <button
+          className='remove-product'
+          onClick={() => {removeProduct(item.id);}}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );

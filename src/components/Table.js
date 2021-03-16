@@ -1,8 +1,8 @@
-import {useState} from 'react';
 import TableRow from "./TableRow";
 
 export default function Table(props) {
-  const [basket, setBasket] = useState(props.basket);
+
+  const { currency, itemsInBasket, removeProduct } = props;
 
   return (
     <div className='table'>
@@ -22,7 +22,16 @@ export default function Table(props) {
       </div>
 
       <div className='table-body'>
-        {basket && basket.map((item) => <TableRow key={item.id} product={item} currency={props.currency} />)}
+        {itemsInBasket &&
+          itemsInBasket.map((item) => (
+            <TableRow
+              key={`${item.id}-table`}
+              item={item}
+              currency={currency}
+              updateBasket={props.updateBasket}
+              removeProduct={props.removeProduct}
+            />
+          ))}
       </div>
     </div>
   );

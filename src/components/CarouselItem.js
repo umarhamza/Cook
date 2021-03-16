@@ -1,10 +1,15 @@
-export default function CarouselItem() {
+export default function CarouselItem(props) {
+  const {
+    addProduct, 
+    product: { id, name, image },
+  } = props;
+
     return (
-      <figure>
-        <div className="product-carousel-img">
-            <img src='/images/lasagne.jpg' alt='' />
+      <figure id={id} onClick={(e) => addProduct(id)}>
+        <div className='product-carousel-img'>
+          <img src={image} alt={`Photo of ${name}`} />
         </div>
-        <figcaption>Lasagne Al Forno</figcaption>
+        <figcaption>{name}</figcaption>
       </figure>
     );
 }
