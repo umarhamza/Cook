@@ -1,17 +1,19 @@
 @font-face {
   font-family: "hugos_handregular";
-  src: url("/fonts/hugoshandtwo.woff") format("woff"),
-    url("/fonts/hugoshandtwo2.woff2") format("woff2"),
-    url("/fonts/hugoshandtwo.ttf") format("truetype");
+  src: url("../fonts/hugoshandtwo.eot") format("eot"),
+    url("../fonts/hugoshandtwo.woff") format("woff"),
+    url("../fonts/hugoshandtwo2.woff2") format("woff2"),
+    url("../fonts/hugoshandtwo.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gill Sans W01 Medium";
-  src: url("/fonts/GillSansMedium.woff") format("woff"),
-    url("/fonts/GillSansMedium2.woff2") format("woff2"),
-    url("/fonts/GillSansMedium.ttf") format("truetype");
+  src: url("../fonts/GillSansMedium.eot") format("eot"),
+    url("../fonts/GillSansMedium.woff") format("woff"),
+    url("../fonts/GillSansMedium2.woff2") format("woff2"),
+    url("../fonts/GillSansMedium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

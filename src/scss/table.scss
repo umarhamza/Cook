@@ -328,4 +328,20 @@
       }
     }
   }
+
+  .empty-table {
+    padding-top: 12px;
+
+    h2 {
+      font-family: $hugo, serif;
+      color: $green;
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 }

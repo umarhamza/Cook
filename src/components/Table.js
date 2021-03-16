@@ -22,7 +22,7 @@ export default function Table(props) {
       </div>
 
       <div className='table-body'>
-        {itemsInBasket &&
+        {itemsInBasket.length > 0 ? (
           itemsInBasket.map((item) => (
             <TableRow
               key={`${item.id}-table`}
@@ -31,7 +31,16 @@ export default function Table(props) {
               updateBasket={props.updateBasket}
               removeProduct={props.removeProduct}
             />
-          ))}
+          ))
+        ) : (
+          <div className="empty-table">
+            <h2>Your Shopping Basket</h2>
+            <p>
+              Your shopping basket is currently empty. Please choose an option
+              from those listed below to continue...
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
